@@ -10,7 +10,6 @@ server/**/packages
 # Ignore Node & Bower
 ###################
 node_modules
-build
 bower_components
 **/test/coverage
 
