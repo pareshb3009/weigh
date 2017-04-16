@@ -1,0 +1,30 @@
+{
+  "name": "mly-web",
+  "version": "0.0.1",
+  "description": "MLY web dashboard for providers",
+  "main": "index.html",
+  "dependencies": {
+    "angular": "1.4.1",
+    "angular-bootstrap": "0.13.0",
+    "angular-dragdrop": "~1.0.12",
+    "angular-gantt": "^1.2.13",
+    "angular-google-maps": "~2.2.1",
+    "angular-google-maps-native": "~2.0.0",
+    "angular-ui-router": "0.2.10",
+    "bootstrap": "3.2.0",
+    "font-awesome": "4.1.0",
+    "highcharts-ng": "~0.0.11",
+    "ng-file-upload": "4.2.1",
+    "ng-tags-input": "3.0.0",
+    "ngmap": "~1.15.8",
+    "underscore": "1.8.3",
+    "angu-fixed-header-table": "~1.2.0",
+    "alertify.js": "~0.3.11",
+    "angular-ui-tinymce": "0.0.15",
+    "tinymce-dist": "4.3.12",
+    "angular-elastic": "~2.5.1"
+  },
+  "resolutions": {
+    "angular": "1.4.1"
+  }
+}

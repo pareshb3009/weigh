@@ -1,0 +1,73 @@
+{
+  "client":"./",
+  "htmltemplates": "./partials/**/*.html",
+
+  "vendorjs": [
+  "./bower_components/jquery/dist/jquery.min.js",
+  "./bower_components/jquery-ui/jquery-ui.js",
+  "./bower_components/tinymce-dist/tinymce.js",
+  "./bower_components/angular/angular.min.js",
+  "./bower_components/bootstrap/dist/js/bootstrap.js",
+  "./bower_components/angular-bootstrap/ui-bootstrap.min.js",
+  "./bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js",
+  "./bower_components/ng-tags-input/ng-tags-input.js",
+  "./bower_components/angular-ui-router/release/angular-ui-router.min.js",
+  "./bower_components/ng-file-upload/ng-file-upload.js",
+  "./bower_components/highcharts-ng/dist/highcharts-ng.js",
+  "./bower_components/moment/moment.js",
+  "./bower_components/angular-dragdrop/src/angular-dragdrop.js",
+  "./bower_components/underscore/underscore.js",
+  "./bower_components/lodash/lodash.js",
+  "./bower_components/angular-simple-logger/dist/angular-simple-logger.js",
+  "./bower_components/angular-google-maps/dist/angular-google-maps.js",
+  "./bower_components/angular-google-maps-native/dist/angular-google-maps-native.js",
+  "./bower_components/ngmap/build/scripts/ng-map.min.js",
+  "./bower_components/angu-fixed-header-table/angu-fixed-header-table.js",
+  "./bower_components/angular-ui-tinymce/src/tinymce.js",
+  "./bower_components/angular-elastic/elastic.js",
+  "./bower_components/angular-moment/angular-moment.js",
+  "./bower_components/angular-gantt/assets/angular-gantt.js",
+  "./bower_components/angular-gantt/assets/angular-gantt-plugins.js",
+  "./bower_components/angular-gantt/assets/angular-gantt-table-plugin.js",
+  "./bower_components/angular-gantt/assets/angular-gantt-tooltips-plugin.js"
+  ],
+
+  "vendorcss": [
+  "./bower_components/bootstrap/dist/css/bootstrap.css",
+  "./bower_components/font-awesome/css/font-awesome.css",
+  "./bower_components/ng-tags-input/ng-tags-input.css",
+  "./bower_components/angular-gantt/assets/angular-gantt.css",
+  "./bower_components/angular-gantt/assets/angular-gantt-plugins.css",
+  "./bower_components/angular-gantt/assets/angular-gantt-table-plugin.css",
+  "./bower_components/angular-gantt/assets/angular-gantt-tooltips-plugin.css"
+  ],
+
+  "css": [
+    "./css/**/*.css"
+  ],
+
+  "js": [
+    "./partials/**/*module*.js",
+    "./partials/**/*src.js",
+    "./partials/**/*.js"
+  ],
+
+  "fonts": [    
+    "./bower_components/bootstrap/dist/fonts/*.*",
+    "./fonts/*.*"
+  ],
+  "tinymce_plugins": [
+    "./bower_components/tinymce-dist/plugins/**/*.*"
+  ],
+  "tinymce_skins": [
+    "./bower_components/tinymce-dist/skins/**/*.*"
+  ],
+  "tinymce_themes": [
+    "./bower_components/tinymce-dist/themes/**/*.*"
+  ],
+  "images": [
+    "./images/**/*.*"
+  ],
+  
+  "build": "./build/"
+}

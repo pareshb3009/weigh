@@ -1,0 +1,131 @@
+<div ng-controller="MainCtrl">
+    
+    
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container" style="margin:0 ;padding:0 ;width: 100%;">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse" style="float: left; margin-left: 25px;">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                      <!-- <a class="navbar-brand" href="http://bootply.com"><i class="icon-home icon-white"> </i> Lorem Ipsum blog            </a> -->
+                      <div style="text-align: center">
+                      <img class="rd-navbar-brand" src="images/deltalogo.png" width="50%" style="width:50% !important">
+                      </div>
+          </div>
+          <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav" style="width:100%; background-color: aliceblue;padding: 0 10px 0 10px;" onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
+              <li class="menu-item" ng-class="($state.current.name == 'main.home')?'active':''"><a ui-sref="main.home">Home</a></li>
+              <li class="menu-item dropdown" ng-class="($state.current.name == 'main.about')?'active':''"><a ui-sref="main.about" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li class="menu-item dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Clearing Floats</a>
+                      <ul class="dropdown-menu">
+                        <li class="menu-item "><a href="#">Page with comments</a></li>
+                        <li class="menu-item "><a href="#">Page with comments disabled</a></li>
+                        <li class="menu-item dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">More</a>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">3rd level link more options</a></li><li><a href="#">3rd level link</a>
+                            </li>
+                            <li class="menu-item dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">More</a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">3rd level link more options</a></li><li><a href="#">3rd level link</a>
+                                </li>
+                                <li class="menu-item dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">More</a>
+                                  <ul class="dropdown-menu">
+                                    <li><a href="#">3rd level link more options</a></li><li><a href="#">3rd level link</a>
+                                    </li>
+                                    
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu-item dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Clearing Floats</a>
+                      <ul class="dropdown-menu">
+                        <li class="menu-item "><a href="#">Page with comments</a></li>
+                        <li class="menu-item "><a href="#">Page with comments disabled</a></li>
+                        <li class="menu-item dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">More</a>
+                          <ul class="dropdown-menu"><li><a href="#">3rd level link more options</a></li><li><a href="#">3rd level link</a></li></ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu-item dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Clearing Floats</a>
+                      <ul class="dropdown-menu">
+                        <li class="menu-item "><a href="#">Page with comments</a></li>
+                        <li class="menu-item "><a href="#">Page with comments disabled</a></li>
+                        <li class="menu-item dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">More</a>
+                          <ul class="dropdown-menu"><li><a href="#">3rd level link more options</a></li><li><a href="#">3rd level link</a></li></ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu-item dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Clearing Floats</a>
+                      <ul class="dropdown-menu">
+                        <li class="menu-item "><a href="#">Page with comments</a></li>
+                        <li class="menu-item "><a href="#">Page with comments disabled</a></li>
+                        <li class="menu-item dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">More</a>
+                          <ul class="dropdown-menu"><li><a href="#">3rd level link more options</a></li><li><a href="#">3rd level link</a></li></ul>
+                        </li>
+                      </ul>
+                    </li>
+                </ul>
+              </li>
+              
+              <li class="menu-item" ng-class="($state.current.name == 'main.services')?'active':''"><a ui-sref="main.services">Services</a></li>
+              <li class="menu-item" ng-class="($state.current.name == 'main.products')?'active':''"><a ui-sref="main.products">Products</a></li>
+              <li class="menu-item" ng-class="($state.current.name == 'main.news')?'active':''"><a ui-sref="main.news">News</a></li>
+              <li class="menu-item" ng-class="($state.current.name == 'main.contacts')?'active':''"><a ui-sref="main.contacts">Contacts</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <script>
+        $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+            // Avoid following the href location when clicking
+            event.preventDefault(); 
+            // Avoid having the menu to close when clicking
+            event.stopPropagation(); 
+            // If a menu is already open we close it
+            //$('ul.dropdown-menu [data-toggle=dropdown]').parent().removeClass('open');
+            // opening the one you clicked on
+            $(this).parent().addClass('open');
+
+            var menu = $(this).parent().find("ul");
+            var menupos = menu.offset();
+          
+            if ((menupos.left + menu.width()) + 30 > $(window).width()) {
+                var newpos = - menu.width();      
+            } else {
+                var newpos = $(this).parent().width();
+            }
+            menu.css({ left:newpos });
+
+        });
+
+        $(document).on('click','.navbar-collapse.in',function(e) {
+
+            if( $(e.target).is('a') && ( $(e.target).attr('class') != 'dropdown-toggle' ) ) {
+                $(this).collapse('hide');
+            }
+
+        });
+        
+      </script>
+    <div style="padding-top:0px">
+        <div class="content-container">
+            <div ui-view="menuContent"></div>
+            <div style="bottom: 2%;right: 4.5%;position: fixed;z-index: 9;">
+              <span id="top-link-block" >
+                  <a href="#top" class="well well-sm"  onclick="$('html,body').animate({scrollTop:0},'slow');return false;" style="background-color: transparent;border: 0px; box-shadow: none;">
+                      <i class="glyphicon glyphicon-chevron-up" style="font-size: 20px;color: #1865a7;text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;"></i> 
+                  </a>
+              </span>
+            </div>
+        </div>
+    </div>
+</div>
