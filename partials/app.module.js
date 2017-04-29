@@ -2,7 +2,6 @@
   "use strict";
 
   angular.module('webApp',[
-  	'ui.bootstrap',
   	'routes',
     'authentication',
   	'home',
@@ -23,10 +22,10 @@
 
 //Added for date format
 angular.module('webApp')
-.config(function(datepickerConfig, datepickerPopupConfig) {
-  datepickerPopupConfig.datepickerPopup = "dd/MM/yyyy";
-  //datepickerPopupConfig.showButtonBar= false;
-});
+// .config(function(datepickerConfig, datepickerPopupConfig) {
+//   datepickerPopupConfig.datepickerPopup = "dd/MM/yyyy";
+//   //datepickerPopupConfig.showButtonBar= false;
+// });
 
 angular.module('webApp')
 .filter('dateRange', function() {
