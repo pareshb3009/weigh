@@ -8,6 +8,9 @@
 
   		$interval(function() {
             $("#myCarousel").css({'padding-top':($(".container").height()+'px')});
+            $(".carousel-inner img").css({'height':($("#myCarousel").height()+'px')});
+
+
       	}, 100);
     	
       

@@ -19,7 +19,12 @@
           <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav" style="width:100%; background-color: aliceblue;padding: 0 10px 0 10px;" onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
               <li class="menu-item" ng-class="($state.current.name == 'main.home')?'active':''"><a ui-sref="main.home">Home</a></li>
-              <li class="menu-item dropdown" ng-class="($state.current.name == 'main.about')?'active':''"><a ui-sref="main.about" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+
+              <li class="menu-item" ng-class="($state.current.name == 'main.about')?'active':''"><a ui-sref="main.about">About </a></li>
+              
+              <li class="menu-item" ng-class="($state.current.name == 'main.services')?'active':''"><a ui-sref="main.services">Services</a></li>
+
+              <li class="menu-item dropdown" ng-class="($state.current.name == 'main.products')?'active':''"><a ui-sref="main.products" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li class="menu-item dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Clearing Floats</a>
                       <ul class="dropdown-menu">
@@ -75,9 +80,7 @@
                     </li>
                 </ul>
               </li>
-              
-              <li class="menu-item" ng-class="($state.current.name == 'main.services')?'active':''"><a ui-sref="main.services">Services</a></li>
-              <li class="menu-item" ng-class="($state.current.name == 'main.products')?'active':''"><a ui-sref="main.products">Products</a></li>
+
               <li class="menu-item" ng-class="($state.current.name == 'main.news')?'active':''"><a ui-sref="main.news">News</a></li>
               <li class="menu-item" ng-class="($state.current.name == 'main.contacts')?'active':''"><a ui-sref="main.contacts">Contacts</a></li>
             </ul>
