@@ -3,9 +3,9 @@ header('Content-Type: application/json');
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: *");
 $rest_json = file_get_contents("php://input");
-$_GET = json_decode($rest_json, true);
+$_POST = json_decode($rest_json, true);
 
-if(isset($_GET)) {
+if(isset($_POST)) {
  
      
  
@@ -37,33 +37,33 @@ if(isset($_GET)) {
  
      
  
-    $firstName = $_GET['firstName'];
+    $firstName = $_POST['firstName'];
  
-    $lastName = $_GET['lastName'];
+    $lastName = $_POST['lastName'];
  
-    $email_from = $_GET['email'];
+    $email_from = $_POST['email'];
  
-    $telephone = $_GET['telephone'];
+    $telephone = $_POST['telephone'];
  
-    $startDate = substr($_GET['startDate'], 0, strpos($_GET['startDate'], "T"));
+    $startDate = substr($_POST['startDate'], 0, strpos($_POST['startDate'], "T"));
     $startDate = date('Y-m-d H:i:s', strtotime($startDate . ' + 1 day'));
     $startDate = str_replace(' 00:00:00', '', $startDate);
 
-    $endDate = substr($_GET['endDate'], 0, strpos($_GET['endDate'], "T"));
+    $endDate = substr($_POST['endDate'], 0, strpos($_POST['endDate'], "T"));
     $endDate = date('Y-m-d H:i:s', strtotime($endDate . ' + 1 day'));
     $endDate = str_replace(' 00:00:00', '', $endDate);
 
-    $totalDays = $_GET['totalDays'];
+    $totalDays = $_POST['totalDays'];
 
-    $groupSize = $_GET['groupSize'];
+    $groupSize = $_POST['groupSize'];
 
-    $mealType = $_GET['mealType'];
+    $mealType = $_POST['mealType'];
 
-    $messageDetails = $_GET['message'];
+    $messageDetails = $_POST['message'];
 
-    $percentage = number_format($_GET['percentage'], 2, '.', ',');
+    $percentage = number_format($_POST['percentage'], 2, '.', ',');
 
-    $total = number_format($_GET['total'], 2, '.', ',');
+    $total = number_format($_POST['total'], 2, '.', ',');
  
     $email_message = "Form details below.\n\n";
  
