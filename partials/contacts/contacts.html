@@ -30,20 +30,20 @@
  
 <div class="rd-mailform-validate"></div>
  
-<form data-result-class="rd-mailform-validate" data-form-type="contact" method="post" action="email.asp" class="rd-mailform">
+<form name="feedbackForm" data-result-class="rd-mailform-validate" data-form-type="contact" class="rd-mailform">
 <div class="range">
 <div class="cell-xs-12 cell-md-5">
-<div class="mfInput"><input type="text" name="name" data-constraints="@NotEmpty" placeholder="Name"><div class="mfValidation"></div></div>
-<div class="mfInput"><input type="text" data-constraints="@Phone" name="phone" placeholder="Phone"><div class="mfValidation"></div></div>
-<div class="mfInput"><input type="text" name="email" data-constraints="@NotEmpty @Email" placeholder="Email"><div class="mfValidation"></div></div>
+<div class="mfInput"><input type="text" ng-model="formData.name" name="name" data-constraints="@NotEmpty" placeholder="Name" required><div class="mfValidation"></div></div>
+<div class="mfInput"><input type="text" ng-model="formData.phone" data-constraints="@Phone" name="phone" placeholder="Phone" required><div class="mfValidation"></div></div>
+<div class="mfInput"><input type="text" ng-model="formData.email" name="email" data-constraints="@NotEmpty @Email" placeholder="Email" required><div class="mfValidation"></div></div>
 </div>
 <div class="cell-xs-12 cell-md-7 offset-top-29 offset-md-top-0">
-<div class="mfInput"><textarea name="message" data-constraints="@NotEmpty" placeholder="Message"></textarea><div class="mfValidation"></div></div>
+<div class="mfInput"><textarea ng-model="formData.message" name="message" data-constraints="@NotEmpty" placeholder="Message" required></textarea><div class="mfValidation"></div></div>
 </div>
 </div>
 <div class="range range-md-right text-left offset-top-40">
 <div class="cell-xs-12 cell-md-7">
-<button class="btn btn-lg btn-rect btn-primary">Send</button>
+<button class="btn btn-lg btn-rect btn-primary" ng-click="handleFormSubmit(feedbackForm)">Send</button>
 </div>
 </div>
 </form>
