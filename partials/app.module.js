@@ -11,7 +11,8 @@
     'products',
     'news',
     'contacts',
-    'privacy'
+    'privacy',
+    'enquiry'
 ])
 .value('alerts',[])
 .value('webconfig',{})

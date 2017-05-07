@@ -3,13 +3,14 @@
     var contactsController = function($scope, $location, $state, $http, $interval, homeFactory, $window) {
       
       $scope.initMap = function() {
-        var uluru = {lat: 19.247111, lng: 73.121637};
+        var uluru = {lat: 19.217470, lng: 73.139171};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 14,
-          center: uluru
+          zoom: 18,
+          center: uluru,
+          scrollwheel:  false
         });
 
-        var contentString = 'tetdgjsahd gfjhsdghjsh';
+        var contentString = 'DELTA ELECTRONICS, 16, J.M.Apartment, Jyoti Nagar, Opp. Sharda English High School, Chinchpada Road, Kalyan(E). Off. 9930348889 ';
 
         var infowindow = new google.maps.InfoWindow({
           content: contentString
@@ -95,6 +96,18 @@
     };
 
       $scope.initMap();
+
+
+      // $interval(function() {
+      //   if($('#iframeTypeForm') && $('#iframeTypeForm').contents())
+      //   {
+      //     $('#iframeTypeForm').contents().find('.screen .content-wrapper .content .text').css('display','none');
+      //     $('#iframeTypeForm').contents().find('.screen .content-wrapper .content .button-wrapper').css('display','none');
+      //   }
+
+      // }, 100);
+
+      
       
     };
 

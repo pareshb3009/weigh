@@ -21,10 +21,19 @@
               <li class="menu-item" ng-class="($state.current.name == 'main.home')?'active':''"><a ui-sref="main.home">Home</a></li>
 
               <li class="menu-item" ng-class="($state.current.name == 'main.about')?'active':''"><a ui-sref="main.about">About </a></li>
-              
-              <li class="menu-item" ng-class="($state.current.name == 'main.services')?'active':''"><a ui-sref="main.services">Services</a></li>
 
-              <li class="menu-item dropdown" ng-class="($state.current.name == 'main.products')?'active':''"><a ui-sref="main.products" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+              <li class="menu-item dropdown" ng-class="($state.current.name == 'main.services')?'active':''"><a class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li class="menu-item" ng-click="gotoServices('weighingsolutions')" style="padding: 5px 0 5px 0;"><a >Weighing Solutions</a></li>
+                    <li class="menu-item" ng-click="gotoServices('automation')" style="padding: 5px 0 5px 0;"><a>Automation</a></li>
+                    <li class="menu-item" ng-click="gotoServices('consultation')" style="padding: 5px 0 5px 0;"><a>Consultation</a></li>
+                    <li class="menu-item" ng-click="gotoServices('softwaresolutions')" style="padding: 5px 0 5px 0;"><a>Software Customization</a></li>
+                </ul>
+              </li>
+              
+              <li class="menu-item" ng-class="($state.current.name == 'main.products')?'active':''"><a ui-sref="main.products">Products</a></li>
+
+              <!-- <li class="menu-item dropdown" ng-class="($state.current.name == 'main.products')?'active':''"><a ui-sref="main.products" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li class="menu-item dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Clearing Floats</a>
                       <ul class="dropdown-menu">
@@ -79,9 +88,9 @@
                       </ul>
                     </li>
                 </ul>
-              </li>
+              </li> -->
 
-              <li class="menu-item" ng-class="($state.current.name == 'main.news')?'active':''"><a ui-sref="main.news">News</a></li>
+              <li class="menu-item" ng-class="($state.current.name == 'main.enquiry')?'active':''"><a ui-sref="main.enquiry">Enquiry</a></li>
               <li class="menu-item" ng-class="($state.current.name == 'main.contacts')?'active':''"><a ui-sref="main.contacts">Contacts</a></li>
             </ul>
           </div>

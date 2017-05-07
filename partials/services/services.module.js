@@ -16,7 +16,8 @@
                     "templateUrl" : "partials/services/services.html",
                     "controller" : "servicesController"
                 }
-            }
+            },
+            params: {section: null}
 		});
 		
 

@@ -12,6 +12,10 @@
 
 
       	}, 100);
+
+      $scope.gotoAbout = function(string){
+        $state.go('main.about', { 'section':string })
+      }
     	
       
     };

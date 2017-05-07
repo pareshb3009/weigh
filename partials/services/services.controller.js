@@ -1,13 +1,11 @@
 (function() {
     "use strict";
-    var servicesController = function($scope, $location, $state, $http, $interval, homeFactory) {
-      $interval(function() {
+    var servicesController = function($scope, $location, $state, $http, $interval, homeFactory, $stateParams) {
+      	$interval(function() {
             $(".paddingHeader").css({'padding-top':($(".container").height()+'px')});
-            
+        }, 100);
 
-
-      	}, 100);
-      
+        $scope.section = $stateParams.section;
     };
 
     

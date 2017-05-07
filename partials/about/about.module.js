@@ -11,6 +11,9 @@
 	  	.state('main.about',
 		{
 			url:'/about',
+			params: {
+                "section": null
+            },
 			views : {
                 "menuContent" : {
                     "templateUrl" : "partials/about/about.html",

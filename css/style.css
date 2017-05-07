@@ -29092,6 +29092,14 @@ label span {
   background-color: #6e9bc7;
 }
 
+.typeform-widget #fixed-footer.step0 {
+	display: :none;
+}
+
+ul .questions{
+	margin: 0px;
+}
+
 
 
 

@@ -5,9 +5,10 @@
         .controller('MainCtrl', ['$scope', '$interval', '$state', '$location', MainCtrl]);
 
     function MainCtrl($scope, $interval, $state, $location, user) {
-        
-    	$('html,body').animate({scrollTop:0},'slow');return false;
-        
+        $scope.gotoServices = function(string){
+	        $state.go('main.services', { 'section':string })
+      	}
+      	$('html,body').animate({scrollTop:0},'slow');return false;
         
     }
 
