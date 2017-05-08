@@ -8,6 +8,9 @@
         $scope.gotoServices = function(string){
 	        $state.go('main.services', { 'section':string })
       	}
+        $scope.gotoProduct = function(string){
+          $state.go('main.products.weighscales',{},{reload:true})
+        }
       	$('html,body').animate({scrollTop:0},'slow');return false;
         
     }

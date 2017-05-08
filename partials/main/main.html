@@ -31,7 +31,7 @@
                 </ul>
               </li>
               
-              <li class="menu-item" ng-class="($state.current.name == 'main.products')?'active':''"><a ui-sref="main.products">Products</a></li>
+              <li class="menu-item" ng-class="($state.current.name == 'main.products.weighscales')?'active':''"><a ng-click="gotoProduct('tabletop')">Products</a></li>
 
               <!-- <li class="menu-item dropdown" ng-class="($state.current.name == 'main.products')?'active':''"><a ui-sref="main.products" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -131,7 +131,7 @@
     <div style="padding-top:0px">
         <div class="content-container">
             <div ui-view="menuContent"></div>
-            <div style="bottom: 2%;right: 4.5%;position: fixed;z-index: 9;">
+            <div style="bottom: 2%;right: 4.5%;position: fixed;z-index: 9;" class="productHide">
               <span id="top-link-block" >
                   <a href="#top" class="well well-sm"  onclick="$('html,body').animate({scrollTop:0},'slow');return false;" style="background-color: transparent;border: 0px; box-shadow: none;">
                       <i class="glyphicon glyphicon-chevron-up" style="font-size: 20px;color: #1865a7;text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;"></i> 

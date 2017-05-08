@@ -18,73 +18,58 @@
  
 <main class="page-content">
  
-<section class="paddingHeader">
-<div class="range range-condensed">
-<div class="cell-xs-12 cell-sm-4">
-<div class="thumbnail thumbnail-variant-3"><img src="images/products-01-400x580.jpg" alt="" width="400" height="580">
-<div class="caption"><a href="products.html#" class="btn btn-xl btn-rect btn-warning">Sheets</a></div>
-</div>
-<div class="thumbnail thumbnail-variant-3"><img src="images/products-04-400x570.jpg" alt="" width="400" height="570">
-<div class="caption"><a href="products.html#" class="btn btn-xl btn-rect btn-warning">Spares</a></div>
-</div>
-</div>
-<div class="cell-xs-12 cell-sm-4">
-<div class="thumbnail thumbnail-variant-3"><img src="images/products-02-400x670.jpg" alt="" width="400" height="670">
-<div class="caption"><a href="products.html#" class="btn btn-xl btn-rect btn-warning">Rolled</a></div>
-</div>
-<div class="thumbnail thumbnail-variant-3"><img src="images/products-05-400x479.jpg" alt="" width="400" height="479">
-<div class="caption"><a href="products.html#" class="btn btn-xl btn-rect btn-warning">Wires</a></div>
-</div>
-</div>
-<div class="cell-xs-12 cell-sm-4">
-<div class="thumbnail thumbnail-variant-3"><img src="images/products-03-400x620.jpg" alt="" width="400" height="620">
-<div class="caption"><a href="products.html#" class="btn btn-xl btn-rect btn-warning">Pipes</a></div>
-</div>
-<div class="thumbnail thumbnail-variant-3"><img src="images/products-06-400x529.jpg" alt="" width="400" height="529">
-<div class="caption"><a href="products.html#" class="btn btn-xl btn-rect btn-warning">Tubes</a></div>
-</div>
-</div>
-</div>
-</section>
- 
-<section class="section-75 section-sm-bottom-100">
+<section class="section-sm-top-75 text-center paddingHeader ">
 <div class="range range-sm-center">
-<div class="cell-xs-12 cell-md-10">
-<div class="hr-vertical"></div>
-<h5>Featured products</h5>
-</div>
-</div>
-<div class="range range-wrap">
-<div class="cell-xs-12 cell-sm-6 cell-md-4">
-<div class="product"><img src="images/products-07-370x270.jpg" alt="" width="370" height="270">
-<div class="caption">
-<h6><a href="products.html#">Master magnets</a></h6>
-<p>We produce a wide variety of magnets and magnetic rounds. Our products include high-quality magnetic bases, magnetic handles and magnetic sweepers. The materials we use all come only from ecologically-friendly locations.</p>
-</div>
-</div>
-</div>
-<div class="cell-xs-12 cell-sm-6 cell-md-4 offset-top-45 offset-sm-top-0">
-<div class="product"><img src="images/products-08-370x270.jpg" alt="" width="370" height="270">
-<div class="caption">
-<h6><a href="products.html#">Powerful pressers</a></h6>
-<p>Our pressers are powerful enough for a majority of metal items manufacturers out there! Starting with our rich selection of hydraulic pressers, we also have pneumatic ones for smaller productions, as well as custom made, arbor pressers.</p>
-</div>
-</div>
-</div>
-<div class="cell-xs-12 cell-sm-6 cell-md-4 offset-top-45 offset-md-top-0">
-<div class="product"><img src="images/products-09-370x270.jpg" alt="" width="370" height="270">
-<div class="caption">
-<h6><a href="products.html#">Band saws</a></h6>
-<p>On par with regular saws we also sell portable band saws. These are made from the top-quality metals only. Additionally we have a wide range of accessories. They include pre-sharpened replacement blades, as well as numerous spare handles for saws.</p>
-</div>
-</div>
-</div>
-</div>
 
+<div class="cell-xs-12 cell-md-12">
+<div class="row">
+        <div class="col-xs-3" id="leftCol" style="text-align: left;padding-left:40px;">
+            <ul class="nav nav-stacked" id="sidebar" style="margin: 0px;width:auto">
+                  <li class="active">
+                    <a  ng-click="gotoProduct('tabletop')">Weighing Scales</a>
+                    <ul class="nav">
+                      <li class="" ng-click="gotoProduct('tabletop')"><a >- Tabletop Scales</a></li>
+                      <li class="" ng-click="gotoProduct('platform')"><a >- Platform Scales</a></li>
+                      <li class="" ng-click="gotoProduct('precision')"><a >- Precision Scales</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a ng-click="gotoProduct('bagging')">Weighing Systems</a>
+                    <ul class="nav">
+                      <li class="" ng-click="gotoProduct('bagging')"><a>- Bagging Systems</a></li>
+                      <li class="" ng-click="gotoProduct('batching')"><a>- Batching Systems</a></li>
+                      <li class="" ng-click="gotoProduct('belt')"><a>- Belt Weighing Systems</a></li>
+                      <li class="" ng-click="gotoProduct('filling')"><a>- Filling Systems</a></li>
+                      <li class="" ng-click="gotoProduct('tank')"><a>- Tank Weighing Systems</a></li>
+                      <li class="" ng-click="gotoProduct('bridge')"><a>- Weighbridge</a></li>
+                      <li class="" ng-click="gotoProduct('dynamometer')"><a>- Dynamometer</a></li>
+                    </ul>
+                  </li>
+                  <li><a>Universal Testing Machine</a></li>
+                  <li><a>Weighing Accessories & Spares</a></li>
+            </ul>
+
+        </div>
+        <div class="col-xs-9">
+            <div ui-view="menuContent" class="productmenucontent" style="max-height: 600px;background-color: white;
+            overflow-y: scroll;"></div>
+        </div>
+    </div>
+</div>
+</div>		
 </section>
+
 </main>
  
-<div ng-include="'partials/footer.html'"></div>
+<!-- <div ng-include="'partials/footer.html'"></div> -->
+
+<div style="bottom: 2%;right: 4.5%;position: fixed;z-index: 9;">
+              <span id="top-link-block" >
+                  <a href="#top" class="well well-sm"  onclick="$('.productmenucontent').animate({scrollTop:0},'slow');$('html,body').animate({scrollTop:0},'slow');return false;" style="background-color: transparent;border: 0px; box-shadow: none;">
+                      <i class="glyphicon glyphicon-chevron-up" style="font-size: 20px;color: #1865a7;text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;"></i> 
+                  </a>
+              </span>
+            </div>
 </div>
 
 

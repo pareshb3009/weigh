@@ -29092,13 +29092,18 @@ label span {
   background-color: #6e9bc7;
 }
 
-.typeform-widget #fixed-footer.step0 {
-	display: :none;
+
+
+.icon-bar {
+	background-color:#fff;
 }
 
-ul .questions{
-	margin: 0px;
+/* hide sidebar sub menus by default */
+#sidebar.nav .nav {
+	/*display: none;*/
+    font-size:12px;
 }
+
 
 
 
