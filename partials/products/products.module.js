@@ -21,7 +21,7 @@
 		})
 		.state('main.products.weighscales',
 		{
-			url:'/products/weighscales',
+			url:'/weighscales',
 			views : {
                 "menuContent" : {
                     "templateUrl" : "partials/products/weighscales.html",
@@ -31,7 +31,7 @@
 		})
 		.state('main.products.weighsystems',
 		{
-			url:'/products/weighsystems',
+			url:'/weighsystems',
 			views : {
                 "menuContent" : {
                     "templateUrl" : "partials/products/weighsystems.html",
@@ -41,7 +41,7 @@
 		})
 		.state('main.products.utm',
 		{
-			url:'/products/utm',
+			url:'/utm',
 			views : {
                 "menuContent" : {
                     "templateUrl" : "partials/products/utm.html",
@@ -51,7 +51,7 @@
 		})
 		.state('main.products.was',
 		{
-			url:'/products/was',
+			url:'/was',
 			views : {
                 "menuContent" : {
                     "templateUrl" : "partials/products/was.html",
