@@ -10,7 +10,7 @@
           scrollwheel:  false
         });
 
-        var contentString = 'DELTA ELECTRONICS, 16, J.M.Apartment, Jyoti Nagar, Opp. Sharda English High School, Chinchpada Road, Kalyan(E). Off. 9930348889 ';
+        var contentString = 'DELTA ELECTRONICS,<br>16, J.M.Apartment, Jyoti Nagar,<br>Opp. Sharda English High School,<br>Chinchpada Road, Kalyan(E).<br>Off. 9930348889 ';
 
         var infowindow = new google.maps.InfoWindow({
           content: contentString
