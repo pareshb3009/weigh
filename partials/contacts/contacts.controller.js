@@ -22,8 +22,9 @@
           title: 'Uluru (Ayers Rock)'
         });
         marker.addListener('click', function() {
-          infowindow.open(map, marker);
+          
         });
+        infowindow.open(map, marker);
       }
 
       $scope.feedback_errors = "";
