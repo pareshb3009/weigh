@@ -25,28 +25,28 @@
 <div class="row">
         <div class="col-xs-3" id="leftCol" style="text-align: left;padding-left:40px;">
             <ul class="nav nav-stacked" id="sidebar" style="margin: 0px;width:auto">
-                  <li class="active">
-                    <a  ng-click="gotoProduct('tabletop')">Weighing Scales</a>
+                  <li class="active"> 
+                    <a  ng-click="gotoProduct('tabletop')">Weighing Scales {{viewProduct}}</a>
                     <ul class="nav">
-                      <li class="" ng-click="gotoProduct('tabletop')"><a >- Tabletop Scales</a></li>
-                      <li class="" ng-click="gotoProduct('platform')"><a >- Platform Scales</a></li>
-                      <li class="" ng-click="gotoProduct('precision')"><a >- Precision Scales</a></li>
+                      <li ng-class="(viewProduct == 'tabletop' || !viewProduct)?'productActive':''" ng-click="gotoProduct('tabletop')"><a >- Tabletop Scales</a></li>
+                      <li ng-class="(viewProduct == 'platform')?'productActive':''" ng-click="gotoProduct('platform')"><a >- Platform Scales</a></li>
+                      <li ng-class="(viewProduct == 'precision')?'productActive':''" ng-click="gotoProduct('precision')"><a >- Precision Scales</a></li>
                     </ul>
                   </li>
                   <li>
                     <a ng-click="gotoProduct('bagging')">Weighing Systems</a>
                     <ul class="nav">
-                      <li class="" ng-click="gotoProduct('bagging')"><a>- Bagging Systems</a></li>
-                      <li class="" ng-click="gotoProduct('batching')"><a>- Batching Systems</a></li>
-                      <li class="" ng-click="gotoProduct('belt')"><a>- Belt Weighing Systems</a></li>
-                      <li class="" ng-click="gotoProduct('filling')"><a>- Filling Systems</a></li>
-                      <li class="" ng-click="gotoProduct('tank')"><a>- Tank Weighing Systems</a></li>
-                      <li class="" ng-click="gotoProduct('bridge')"><a>- Weighbridge</a></li>
-                      <li class="" ng-click="gotoProduct('dynamometer')"><a>- Dynamometer</a></li>
+                      <li ng-class="(viewProduct == 'bagging')?'productActive':''" ng-click="gotoProduct('bagging')"><a>- Bagging Systems</a></li>
+                      <li ng-class="(viewProduct == 'batching')?'productActive':''" ng-click="gotoProduct('batching')"><a>- Batching Systems</a></li>
+                      <li ng-class="(viewProduct == 'belt')?'productActive':''" ng-click="gotoProduct('belt')"><a>- Belt Weighing Systems</a></li>
+                      <li ng-class="(viewProduct == 'filling')?'productActive':''" ng-click="gotoProduct('filling')"><a>- Filling Systems</a></li>
+                      <li ng-class="(viewProduct == 'tank')?'productActive':''" ng-click="gotoProduct('tank')"><a>- Tank Weighing Systems</a></li>
+                      <li ng-class="(viewProduct == 'bridge')?'productActive':''" ng-click="gotoProduct('bridge')"><a>- Weighbridge</a></li>
+                      <li ng-class="(viewProduct == 'dynamometer')?'productActive':''" ng-click="gotoProduct('dynamometer')"><a>- Dynamometer</a></li>
                     </ul>
                   </li>
-                  <li><a ng-click="gotoProduct('utm')">Universal Testing Machine</a></li>
-                  <li><a ng-click="gotoProduct('was')">Weighing Accessories & Spares</a></li>
+                  <li><a ng-class="(viewProduct == 'utm')?'productActive':''" ng-click="gotoProduct('utm')">Universal Testing Machine</a></li>
+                  <li><a ng-class="(viewProduct == 'was')?'productActive':''" ng-click="gotoProduct('was')">Weighing Accessories & Spares</a></li>
             </ul>
 
         </div>

@@ -29104,7 +29104,9 @@ label span {
     font-size:12px;
 }
 
-
+.productActive{
+	background-color: #fbfbfb;
+}
 
 
 

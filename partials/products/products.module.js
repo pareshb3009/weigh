@@ -25,40 +25,40 @@
 			views : {
                 "menuContent" : {
                     "templateUrl" : "partials/products/weighscales.html",
-                    "controller" : "productsController"
+                    // "controller" : "productsController"
                 }
             }
 		})
-		.state('main.products.weighsystems',
-		{
-			url:'/weighsystems',
-			views : {
-                "menuContent" : {
-                    "templateUrl" : "partials/products/weighsystems.html",
-                    "controller" : "productsController"
-                }
-            }
-		})
-		.state('main.products.utm',
-		{
-			url:'/utm',
-			views : {
-                "menuContent" : {
-                    "templateUrl" : "partials/products/utm.html",
-                    "controller" : "productsController"
-                }
-            }
-		})
-		.state('main.products.was',
-		{
-			url:'/was',
-			views : {
-                "menuContent" : {
-                    "templateUrl" : "partials/products/was.html",
-                    "controller" : "productsController"
-                }
-            }
-		});
+		// .state('main.products.weighsystems',
+		// {
+		// 	url:'/weighsystems',
+		// 	views : {
+  //               "menuContent" : {
+  //                   "templateUrl" : "partials/products/weighsystems.html",
+  //                   "controller" : "productsController"
+  //               }
+  //           }
+		// })
+		// .state('main.products.utm',
+		// {
+		// 	url:'/utm',
+		// 	views : {
+  //               "menuContent" : {
+  //                   "templateUrl" : "partials/products/utm.html",
+  //                   "controller" : "productsController"
+  //               }
+  //           }
+		// })
+		// .state('main.products.was',
+		// {
+		// 	url:'/was',
+		// 	views : {
+  //               "menuContent" : {
+  //                   "templateUrl" : "partials/products/was.html",
+  //                   "controller" : "productsController"
+  //               }
+  //           }
+		// });
 		
 
   	};
