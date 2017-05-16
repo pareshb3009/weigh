@@ -8,7 +8,8 @@
 
   		$interval(function() {
             $("#myCarousel").css({'padding-top':($(".container").height()+'px')});
-            $(".carousel-inner img").css({'height':($("#myCarousel").height()+'px')});
+            $("center img").css({'height':($("#myCarousel").height()+'px')});
+            $(".thumb img").css({'height':($("#thumbCarousel").height()+'px')});
 
 
       	}, 100);
@@ -16,6 +17,16 @@
       $scope.gotoAbout = function(string){
         $state.go('main.about', { 'section':string })
       }
+
+      $(document).ready(function() {
+        $('#thumbCarousel').carousel({
+          interval: 0
+        })
+          
+        $('#thumbCarousel').on('slid.bs.carousel', function() {
+          //alert("slid");
+        });
+      });
     	
       
     };
